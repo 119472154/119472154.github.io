@@ -31,7 +31,52 @@ body {
 h1 {color: #7FFFD4}
 h2 {color: orange}
 p {background-color: white}
+span {background-color: white;}
+h5 {color: white;}
 
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+</style>
 
 </style>
 </head>
@@ -45,25 +90,50 @@ p {background-color: white}
   <a href="My-Interests.html">Interests</a>
   <a href="Ebus1.html">Ebusiness</a>
 </div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="My-Home.html">Home</a>
+  <a href="My-CV.html">CV</a>
+  <a href="My-Interests.html">Interests</a>
+  <a href="Ebus1.html">Ebusiness</a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
   
   <div class="Interests">
 <h1 style="border:2px solid DodgerBlue;" style="text-align: center;">What we offer:</h1>
 </div>
 
+
+<h5>Click the images for further information</h5>
 <h2><u>Hyperautomation</u></h2>
-<p>As defined by Gartner, hyper-automation “deals with the application of advanced technologies, including artificial intelligence (AI) and machine learning (ML), to increasingly automate processes and augment humans. Hyper-automation extends across a range of tools that can be automated, but also refers to the sophistication of the automation (i.e., discover, analyse, design, automate, measure, monitor, reassess.)”The benefits of hyper-automation will allow your workforce to be educated with the latest business and marketplace information so that they can perform their roles optimally. </p>
+<p><font size="4.5">As defined by Gartner, hyper-automation “deals with the application of advanced technologies, including artificial intelligence (AI) and machine learning (ML), to increasingly automate processes and augment humans. Hyper-automation extends across a range of tools that can be automated, but also refers to the sophistication of the automation (i.e., discover, analyse, design, automate, measure, monitor, reassess.)”The benefits of hyper-automation will allow your workforce to be educated with the latest business and marketplace information so that they can perform their roles optimally.</font> </p>
 <a href="https://www.solvexia.com/blog/what-is-hyperautomation-a-complete-guide">
 <li><img src="data:image/png;base64,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" width="200" height="150" /></li>
 </a>
 
 <h2><u>Multiexperience</u></h2>
-<p>Multiexperience is about adapting to the increasing market of different devices and their respective experiences. Applications now need to run on different platforms and adapt easily, all while providing a consistent experience from a business perspective. It is a concept pioneered by Gartner late in 2019. In fact, Gartner states that “more than 25% of the mobile apps, progressive web apps and conversational apps at large enterprises will be built and/or run through a multiexperience development platform” by 2023.</p>
+<p><font size="4.5">Multiexperience is about adapting to the increasing market of different devices and their respective experiences. Applications now need to run on different platforms and adapt easily, all while providing a consistent experience from a business perspective. It is a concept pioneered by Gartner late in 2019. In fact, Gartner states that “more than 25% of the mobile apps, progressive web apps and conversational apps at large enterprises will be built and/or run through a multiexperience development platform” by 2023.</font></p>
 <a href="https://www.pgs-soft.com/blog/what-is-multiexperience-why-does-it-matter/">
 <li><img src="multiexperience-icon.png" width="200" height="150" /></li>
 </a>
 
 <h2><u>Distributed Cloud</u></h2>
-<p>A distributed file system for cloud is a file system that allows many clients to have access to data and supports operations on that data. Each data file may be partitioned into several parts called chunks. Each chunk may be stored on different remote machines, facilitating the parallel execution of applications.</p>
+<p><font size="4.5">A distributed file system for cloud is a file system that allows many clients to have access to data and supports operations on that data. Each data file may be partitioned into several parts called chunks. Each chunk may be stored on different remote machines, facilitating the parallel execution of applications.</font></p>
 <a href="https://www.stackpath.com/edge-academy/distributed-cloud-computing/">
 <li><img src="discloud-icon.png" width="200" height="150" /></li>
 </a>

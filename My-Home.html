@@ -73,25 +73,92 @@ img {
     background-color: #FFB6C1;
 	color: black;
 }
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
   </style>		
 			
 	</head>
 	
 <body>
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="My-CV.html">CV</a>
+  <a href="My-Interests.html">Interests</a>
+  <a href="My-Consulting.html">About Consulting</a>
+  <a href="Ebus1.html">Ebusiness</a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
 
 <div class="Mytitle"> 
     <h1 style="border:2px solid DodgerBlue;" style="text-align: center;">Michael Hammett-Home</h1>
 	</div>
 	<header>
-	    <img  width=300 height=310 src="https://mail.google.com/mail/u/0?ui=2&ik=283f117e2f&attid=0.1&permmsgid=msg-a:r6127622139807523076&th=170c9eb583133f4b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ9AhqyMWtjlTX29umkeowohsEw2n-HBn0EhsII743fqyH9WgPD8yuAbDsqHglQzyDMy1bvnVRGtoDFD0Faq4pSTAxoocyuGSa06Y4qNytVb9aGEpTw_xl9sh7Y&disp=emb&realattid=170c9eb4fcca5817cec1" class="profile-img">
+	    <img  width=300 height=310 src="picture2.jpg" class="profile-img">
 	</header>
 	
 
 <main>
 	<section id="hero">
 		<div class="section-inner">
-			<img width=300 height=310 src="https://mail.google.com/mail/u/0?ui=2&ik=283f117e2f&attid=0.1&permmsgid=msg-a:r5264032436093977737&th=170c1656bd9e350e&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ_4moy7EfzqJbDTQ7OPt9WNM20Qpo2G_-DWg-r-2rnmpjdh8OAiO1VreFFsRValOV5qozNOGQLbgXrJCJAdgeyDR2YaVHsdDNG43VJjyKcVf4Al0ePrsm7oDJE&disp=emb&realattid=170c1655ab2178bdef51" class="profile-img">
+			<img width=300 height=310 src="picture1.jpg" class="profile-img">
 			<nav>
 		<div class="Mynav1">
 			<a href="My-CV.html">Curriculum Vitae</a>
@@ -120,6 +187,7 @@ img {
 				<li><u>You can find me on:</u></li>
 					<li>Phone Number: 0860661234</li>
 					<a href="https://www.google.com/search?q=gmail&oq=gmail&aqs=chrome.0.69i59j0l3j69i61j69i65j69i61j69i60.1830j0j7&sourceid=chrome&ie=UTF-8"><li>E-mail: 119472154@umail.ucc.ie</li></a>
+				    <a href="https://119472154.github.io/My-Home.html"><li>Github Link</li></a>
 				</ul>
 		</div>
 	</section>
