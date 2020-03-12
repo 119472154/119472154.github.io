@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #FFB6C1;
+  color: black;
+}
+
+body {
+  background-color: #F5FFFA;
+}
+
+
+</style>
+
+<TITLE>Strategic Consultancy Services</TITLE>
+
+   <HEAD>
+    <TITLE>Strategic Consultancy Services</TITLE>
+  <SCRIPT>
+    function Calculate() {
+     var cost=0;
+    if (document.priceForm.ConsultancyType[0].checked==true) //Document Object Model (DOM) address
+             cost = 200;
+             if (document.priceForm.ConsultancyType[1].checked==true)
+             cost = 500;
+    else
+             cost = 1000;
+    if(document.priceForm.discount.checked==true)
+             cost = cost * 0.95;
+    if(document.priceForm.vat.checked==true)
+             cost = cost *1.2 ;
+     DisplayPrice(cost);
+    } //End of Calculate – ALL local vars e.g. cost are distroyed
+
+   function DisplayPrice(y) {
+      alert("Total Price: "+ y +" Euro");
+   } //End of DisplayPrice – parm var y is distroyed
+
+   </SCRIPT>
+
+ </HEAD>
+
+
+<BODY>
+
+
+<div class="topnav">
+  <a href="My-Home.html">Home</a>
+  <a href="My-CV.html">Curriculum Vitae</a>
+  <a href="My-Interests.html">Interests</a>
+  <a href="My-Consulting.html">Consulting</a>
+</div>
+<h2><u>Select a Consulting Service:</u></h2>
+
+
+
+   <center>
+   <form name=priceForm>
+   <table border="1">
+      <tr>
+        <th>DESCRIPTION</th>  <th>COST</th>
+      </tr>
+      <tr>
+        <td><input type="radio" name="ConsultancyType" value="A" checked>Hyperautomation</td>
+        <td>200 Euro</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="ConsultancyType" value="B">Multiexperience</td>
+        <td>500 Euro</td>
+      </tr>
+ <tr>
+        <td><input type="radio" name="ConsultancyType" value="C">Distributed Cloud</td>
+        <td>1000 Euro</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="discount">5% discount</td>
+        <td>-5%</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="vat">VAT @ 20%</td>
+        <td>+20%</td>
+      </tr>
+      <tr>
+        <td colspan="2"><center><input type="button" onClick="Calculate()" value="Calculate Total Price" name="calc"></center></td>
+      </tr>
+   </table>
+   </form>
+   </center>
+   </BODY>
+
+</html>
